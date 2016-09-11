@@ -1,11 +1,12 @@
-import {Observer, DisplayElement, Subject} from './interfaces';
+import {Observer, DisplayElement} from './interfaces';
 import {WeatherDataState} from './weather-data-state.state';
+import {Observable} from './observable';
 
 export class CurrentConditionsDisplay implements Observer, DisplayElement {
   state: WeatherDataState;
 
-  constructor (private subject: Subject) {
-    this.subject.registerObserver(this);
+  constructor (private observable: Observable) {
+    this.observable.registerObserver(this);
   }
 
   update (state: WeatherDataState): void {
@@ -14,10 +15,6 @@ export class CurrentConditionsDisplay implements Observer, DisplayElement {
   }
 
   display (): void {
-    if (!this.state) {
-      console.log('Current conditions: no conditions yet..');
-      return;
-    }
     console.log('Current conditions:', this.state.temperature, this.state.humidity, this.state.pressure);
   }
 }

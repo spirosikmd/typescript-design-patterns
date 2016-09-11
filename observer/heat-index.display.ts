@@ -1,12 +1,12 @@
-import {Observer, DisplayElement, Subject} from './interfaces';
+import {Observer, DisplayElement} from './interfaces';
 import {WeatherDataState} from './weather-data-state.state';
+import {Observable} from './observable';
 
 export class HeatIndexDisplay implements Observer, DisplayElement {
   state: WeatherDataState;
 
-  constructor (private subject: Subject) {
-    this.subject = subject;
-    this.subject.registerObserver(this);
+  constructor (private observable: Observable) {
+    this.observable.registerObserver(this);
   }
 
   update (state: WeatherDataState): void {
@@ -15,9 +15,6 @@ export class HeatIndexDisplay implements Observer, DisplayElement {
   }
 
   display (): void {
-    if (!this.state) {
-      return;
-    }
     console.log('Heat index:', this.calculateHeatIndex())
   }
 

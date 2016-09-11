@@ -1,6 +1,6 @@
 import {CurrentConditionsDisplay} from './current-conditions.display';
 import {HeatIndexDisplay} from './heat-index.display';
-import {WeatherData} from './weather-data.subject';
+import {WeatherData} from './weather-data.observable';
 
 console.log('=== OBSERVER ===');
 
