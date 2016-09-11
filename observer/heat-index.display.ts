@@ -20,6 +20,7 @@ export class HeatIndexDisplay implements Observer, DisplayElement {
 
   calculateHeatIndex () {
     // Fake heat index calculation
-    return this.state.temperature * this.state.humidity * 16.923;
+    let data = this.state.get();
+    return data.temperature * data.humidity * 16.923;
   }
 }

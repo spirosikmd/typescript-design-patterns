@@ -1,6 +1,6 @@
-import {Observer, State} from './interfaces';
+import {Observer, State, Subject} from './interfaces';
 
-export class Observable {
+export class Observable implements Subject {
   private observers: Observer[];
   private changed: boolean;
 

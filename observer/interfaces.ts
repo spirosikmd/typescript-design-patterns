@@ -9,3 +9,9 @@ export interface Observer {
 export interface DisplayElement {
   display: () => void;
 }
+
+export interface Subject {
+  registerObserver: (observer: Observer) => void;
+  removeObserver: (observer: Observer) => void;
+  notifyObservers: (state: State) => void;
+}

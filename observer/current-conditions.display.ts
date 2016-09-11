@@ -15,6 +15,7 @@ export class CurrentConditionsDisplay implements Observer, DisplayElement {
   }
 
   display (): void {
-    console.log('Current conditions:', this.state.temperature, this.state.humidity, this.state.pressure);
+    let data = this.state.get();
+    console.log('Current conditions:', data.temperature, data.humidity, data.pressure);
   }
 }
