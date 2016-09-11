@@ -4,7 +4,7 @@
   "description": "TypeScript Design Patterns",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"tsc -w\" \"watchify index.ts -p [ tsify ] -o bundle.js\""
+    "start": "concurrently \"tsc -w\" \"watchify index.ts -p [ tsify ] -o bundle.js\" \"lite-server\""
   },
   "keywords": [
     "TypeScript",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "concurrently": "^2.2.0",
+    "lite-server": "^2.2.2",
     "tsify": "^1.0.6",
     "typescript": "^1.8.10",
     "watchify": "^3.7.0"
