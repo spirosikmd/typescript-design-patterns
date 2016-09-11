@@ -13,6 +13,10 @@
   ],
   "author": "Spyros Ioakeimidis <spyrosikmd@gmail.com> (http://www.spyros.io)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirosikmd/typescript-design-patterns"
+  },
   "devDependencies": {
     "browserify": "^13.1.0",
     "concurrently": "^2.2.0",
