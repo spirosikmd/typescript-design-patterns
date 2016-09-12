@@ -1,5 +1,5 @@
-import {WeatherDataState} from './weather-data-state.state';
-import {Observable} from './observable';
+import {WeatherDataState} from '../states/weather-data-state';
+import {Observable} from '../observable';
 
 export class WeatherData extends Observable {
   state: WeatherDataState;

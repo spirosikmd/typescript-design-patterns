@@ -1,4 +1,4 @@
-import {State} from './interfaces';
+import {State} from '../interfaces';
 
 export interface WeatherDataValues {
   temperature: number;

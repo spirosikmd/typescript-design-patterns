@@ -1,16 +1,16 @@
-import {CurrentConditionsDisplay} from './current-conditions.display';
-import {HeatIndexDisplay} from './heat-index.display';
-import {WeatherData} from './weather-data.observable';
+/**
+ * Observer ...
+ */
 
 console.log('=== OBSERVER ===');
+
+import {CurrentConditionsDisplay} from './observers/current-conditions';
+import {HeatIndexDisplay} from './observers/heat-index';
+import {WeatherData} from './observables/weather-data';
 
 let weatherData = new WeatherData();
 new CurrentConditionsDisplay(weatherData);
 new HeatIndexDisplay(weatherData);
-
-setInterval(() => {
-  weatherData.setMeasurements(getTemperature(), getHumidity(), getPressure());
-}, 3000);
 
 // These measurements could come from an API!
 
@@ -25,3 +25,7 @@ let getHumidity = (): number => {
 let getPressure = (): number => {
   return Math.floor((Math.random() * 1000) + 1);
 };
+
+weatherData.setMeasurements(getTemperature(), getHumidity(), getPressure());
+
+weatherData.setMeasurements(getTemperature(), getHumidity(), getPressure());

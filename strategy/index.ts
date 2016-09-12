@@ -1,6 +1,10 @@
-import {Bloomy, EarthPower} from './strategy';
+/**
+ * Strategy ...
+ */
 
 console.log('=== STRATEGY ===');
+
+import {Bloomy, EarthPower} from './strategy';
 
 let bloomy = new Bloomy();
 bloomy.attack();

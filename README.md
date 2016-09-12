@@ -6,6 +6,8 @@ Currently implemented patterns:
 
 - [x] Strategy
 - [x] Observer
+- [x] Decorator
+- [ ] Factory
 
 To develop further install node modules
 

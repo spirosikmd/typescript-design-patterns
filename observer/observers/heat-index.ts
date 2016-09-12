@@ -1,6 +1,6 @@
-import {Observer, DisplayElement} from './interfaces';
-import {WeatherDataState} from './weather-data-state.state';
-import {Observable} from './observable';
+import {Observer, DisplayElement} from '../interfaces';
+import {WeatherDataState} from '../states/weather-data-state';
+import {Observable} from '../observable';
 
 export class HeatIndexDisplay implements Observer, DisplayElement {
   state: WeatherDataState;
