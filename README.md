@@ -15,7 +15,7 @@ To develop further install node modules
 $ npm i
 ```
 
-and start the development setup
+and start development
 
 ```
 $ npm start
