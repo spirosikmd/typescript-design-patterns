@@ -1,10 +1,9 @@
 import {Weapon} from '../weapons/weapon';
 
-export class Character {
+export abstract class Character {
   private weapon: Weapon;
 
   attack () {
-    console.log('King is attacking!');
     this.weapon.useWeapon();
   }
 
